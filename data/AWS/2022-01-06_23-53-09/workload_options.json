@@ -1,0 +1,1 @@
+{"scenarios": {"constant": {"executor": "constant-arrival-rate", "rate": 1, "timeUnit": "10s", "duration": "50m", "preAllocatedVUs": 20, "maxVUs": 50}}}
