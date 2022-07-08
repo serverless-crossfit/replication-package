@@ -52,7 +52,7 @@ options = {
 def run_test(sb):
 
     try:
-        # sb.prepare()
+        sb.prepare()
         sb.config.set('label', 'experiment_bursty_3.py')
         sb.invoke('custom', workload_options=options)
         sb.wait(5 * 60)
@@ -60,8 +60,8 @@ def run_test(sb):
         sb.analyze_traces()
     except:
         logging.error('Error during execution of benchmark. Cleaning up ...')
-    # finally:
-    #     sb.cleanup()
+    finally:
+        sb.cleanup()
 
 # for i in range(1):
 for sb in sb_clis:
